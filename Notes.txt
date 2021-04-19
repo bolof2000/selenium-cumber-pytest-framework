@@ -1,0 +1,60 @@
+python -m pytest --verbose
+pytest -m pytest --quiet
+pytest -m pytest --exitfirst   -- stops after first failure
+pytest -m pytest -maxfail=1
+
+reporting:
+
+python -m pytest --junit-xml report.xml  - check how to print reports in html
+
+python -m pytest -k one  --- all test with one
+
+python -m pytest -m  marker_name
+
+white Box = Unit testing  is the code written to do expected Things
+Black Box - Feature test, integration test , end to end test
+pytest -m test_rest_api.py --html=report.html
+>pip install pytest-html
+pip install pytest-cov  ----- shows test coverage
+python -m pytest --cov=stuff  --cov-report html
+pip install pytest-xdist   -- runs test in parallel
+python -m pytest -n 3
+pip install pytest-bdd
+
+Selenium and Gherkins
+
+Always write test steps before test code
+Write your test steps using Gherkin approach
+
+every TEST CASE SHOULD have its own Webdriver instance
+One Test -One webdriver, One browser
+Test case independence
+Always quit the webdriver
+
+chromedriver --version
+
+Page Objects :
+
+it has locators for finding elements on the page
+it has interaction methods that interact with the ppage under test
+Each web page under test shoult have a page object class
+
+Identify the Page
+Define the methods for each interation
+
+DuckDuckGo Search Page
+Methods:
+Load the page
+Search a phrase
+
+DuckDuckGo Result Page
+Get the result link titles
+Get the search input value
+Get the title
+
+Xpath
+
+<button>OK</button>
+locator
+xpath =  //button[text()='OK']
+
