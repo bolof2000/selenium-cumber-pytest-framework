@@ -169,17 +169,3 @@ class Solutions:
                 return i
 
         return -1
-
-
-# Input: s = "aaabb", k = 3
-#s = "()[]{}"
-#s1 = "([)]"
-#s3 = "{[]}"
-# s = "abcabcbb"
-# Input: nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]
-# Output: 2
-test = Solutions()
-# print(test.lengthOfLongestSubstring(s))
-# print(test.longestPalindrome("babad"))
-#print(test.isValid(s1))
-print(test.firstUniqChar("leetcode"))
