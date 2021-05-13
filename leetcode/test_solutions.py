@@ -1,5 +1,5 @@
 import pytest
-from cucumber.leetcode.solutions import Solutions
+from leetcode.solutions import Solutions
 
 
 # ------------------------------------------------------------------------------------------

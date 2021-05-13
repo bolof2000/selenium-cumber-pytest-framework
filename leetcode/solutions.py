@@ -1,7 +1,7 @@
-from listnode import ListNode
+
 from collections import defaultdict
 import pdb
-
+from collections import defaultdict
 
 class Solutions:
 
@@ -169,3 +169,29 @@ class Solutions:
                 return i
 
         return -1
+
+    def minDelete(self,strs):
+      mapp = defaultdict(int)
+      myset = set()
+      for s in strs:
+        mapp[s] +=1
+      values = list(mapp.values())
+      total = 0
+      for x in values:
+        while x in myset and x>0:
+          x -=1 
+          total +=1
+        myset.add(x)
+      print(values)
+
+      return total
+
+
+test = Solutions()
+print(test.minDelete("aaabbbcc"))
+
+
+
+
+print("working")
+  
